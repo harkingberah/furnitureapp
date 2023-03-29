@@ -1,0 +1,679 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* stying loader */
+.loader-con{
+    width: 100%;
+    height: 100vh;
+    background: rgb(235, 228, 228);
+    transition: all .5s ease;
+    position: absolute;
+    z-index: 999999;
+    
+}
+.loader-con .loader{
+    width: 100px;
+    height: 100px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border: 15px solid white;
+    position: absolute;
+    margin: auto;
+    border-top-color: yellowgreen;
+    border-radius: 50%;
+    animation: spin.8s linear infinite;
+
+}
+@keyframes spin{
+    to{
+        transform: rotate(360deg);
+    }
+}
+/* styling ligth and dark mode */
+.samson{
+    margin-left: 3%;
+    cursor: pointer;
+}
+:root{
+    --bg: white;
+    --icon: black;
+    --text: black; 
+    --card: black; 
+}
+.dark{
+    --bg: darkblue;
+    --icon: white;
+    --text: white;
+    --card: black;
+
+}
+body{
+    background: var(--bg) !important;
+    color: var(--text) !important;
+    overflow: hidden;
+}
+
+/* styling header*/
+.navbar{
+   background: var(--bg);
+}
+.navbar-nav a{
+    color: var(--text);
+    font-weight: 500;
+}
+
+.navbar-nav a:hover{
+    color: red;
+}
+.wrapper{
+    position: relative;
+}
+.wrapper span{
+    position: absolute;
+    color: black;
+    right: -10px;
+    top: -2px;
+    font-size: 10px;
+    border-radius: 50%;
+    background-color: grey;
+}
+.nav-link img{
+    border: 5px solid green;
+    border-radius: 50%;
+}
+.search button{
+    background-color: khaki;
+    border: none;
+    color: black;
+    font-weight: 300;
+}
+.search button:hover{
+    background-color: green;
+    color: khaki;
+}
+/*styling header done */
+
+
+/* styling carousel */
+.carousel-control-prev{
+    font-size: 50px;
+    color: rgb(255, 81, 0);
+}
+.carousel-control-next{
+    font-size: 50px;
+    color: rgb(255, 81, 0);
+}
+.carousel-item img{
+    height: 80vh;
+}
+.carousel-indicators .active{
+    background-color: red !important;
+}
+/* styling carousel done */
+
+/* styling content */ 
+  .fcat{
+    transition: 0.5s;
+ }
+  .fcat:hover{
+    transform: scale(1.2);
+ } 
+
+ 
+ /* .fcat .card-img:hover {
+    transform: scale(1.05); */ 
+
+.card-img{
+    height: 40vh;
+}
+.title{
+    text-transform: capitalize;
+    text-align: center;
+}
+.title::after{
+    content: '';
+    display: block;
+    width: 180px;
+    height: 2px;
+    background-color: brown;
+    margin-left: auto;
+    margin-right: auto;
+}
+.fprod .card{
+    border: 1px solid green;
+    box-shadow: 5px 5px 5px 5px yellow;
+    transition: 1s;
+    color: black;
+    /* border-radius: 20px; */
+}
+.fprod .card:hover{
+    transform: translateY(-30px);
+}
+.fprod .card img{
+    height: 40vh;
+}
+.bi-truck{
+    font-size: 40px;
+}
+.ship{
+    margin-top: 8%;
+    margin-bottom: 5%;
+}
+.ship i{
+    font-size: 40px;
+}
+/*styling content done*/
+
+/* styling footer  */
+.footer{
+    background-color: yellow;
+    height: 300px;
+}
+.foota h4{
+    text-transform: capitalize;
+}
+.foota ul a{
+    text-decoration: none;
+    color: black;
+}
+.foota p{
+    color: black;
+}
+.foota ul li{
+    color: black;
+    text-transform: capitalize;
+}
+.social i{
+    margin-left: 5px;
+    cursor: pointer;
+}
+.social i:hover{
+    color: black;
+}
+.footb p{
+    background-color: black;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin-bottom: 0px;
+}
+/* styling footer done */
+
+/* styling product page */
+
+/* styling banner */
+.banner{
+    /* background-image: url(/img/carousel\ -\ 1.jpg); */
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.5)), url(../img/carousel\ -\ 4.jpg);
+    height: 40vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner p{
+    margin-top: 15%;
+    color: yellow;
+    font-weight: 500;
+    font-size: 20px;
+    margin-left: 5%;
+}
+.banner a{
+    text-decoration: none;
+    color: yellow;
+}
+.banner span{
+    color: white;
+}
+.banner span:hover{
+    color: yellow;
+}
+/* styling content */
+.product .card{
+    border: 1px solid yellow;
+    border-radius: 10%;
+    box-shadow: 5px 5px 5px 5px yellow;
+    transition: 1s;
+}
+.product .card:hover{
+    transform: translateY(-30px);
+}
+.product img{
+    padding: 3%;
+    height: 200px;
+    border-bottom: 2px solid;
+
+}
+.product .card-body{
+    text-align: center;
+}
+.product .btn{
+    background-color: yellow;
+     border: none;
+}
+
+/* styling pagination */
+.pagination{
+    color: greenyellow;
+    font-weight: 500;
+}
+.pagination :hover{
+    background-color: black;
+    color: white;
+    border-radius: 70%;
+}
+/* styling detailpage starts */
+.fdet .card{
+    border: none;
+}
+.fdet .btn{
+    background-color: yellow;
+    color: black;
+    margin-top: 2%;
+}
+.fdet .btn:hover{
+    background-color: black;
+    color: white;
+}
+
+.fdet p{
+    color: black;
+}
+.fdetcat{
+    font-weight: 500;
+    padding-top: 2%;
+    font-style: italic;
+}
+/* stying detail page done */
+
+/* styling contact */
+.fcont .btn{
+    background-color: yellow;
+    width: 100%;
+    color: white;
+    font-weight: 500;
+}
+.fcont .btn:hover{
+    background-color: yellow;
+}
+.map{
+    height: 53vh;
+}
+
+/* styling contact done */
+
+/* styling sign up */
+.fsign form{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    border: 4px solid yellow;
+    padding: 3%;
+    box-shadow: 5px 5px 15px 5px yellow;
+
+}
+.fsign form label{
+    color: black;
+    font-weight: 500;
+}
+.fsign form input:focus{
+    border: 1px solidy yellow !important;
+    outline: none;
+}
+.fsign .btn{
+    background-color: yellow;
+    width: 100%;
+    color: white;
+    font-weight: 500;
+}
+.fsign .btn:hover{
+   background-color: yellow;
+   color: black;
+}
+.fsign p{
+    padding-top: 3%;
+    color: black;
+    font-weight: 500;
+}
+.fsign a{
+    text-decoration: none;
+    color: yellow;
+}
+.pass{
+    position: relative;
+}
+.see{
+    position: absolute;
+    top: 52%;
+    right:20px;
+    cursor:pointer;
+}
+.see .bi-eye{
+    display: none;
+}
+.see.hide .bi-eye{
+    display: block;
+}
+.see.hide .bi-eye-slash{
+    display: none;
+}
+/* styling sign up done */
+
+/* styling product page done */
+
+/* styling cart */
+ .cart table{
+   width: 80%;
+   margin-left: 10%;
+   margin-right: 10%;
+   border: 1px solid yellow;
+   text-align: center;
+ }
+
+ .cart thead{
+    background-color: yellow;
+    text-transform: capitalize;
+    color: grey;
+ }
+.item td{
+    padding-top: 2%;
+    font-weight: 500;
+    border: 1px solid yellow;
+}
+ 
+ .cart .checkbtn a{
+    text-decoration: none;
+    color: white;
+ }
+ .item span{
+    font-weight: 500;
+ }
+ .item i{
+    color: yellow;
+ }
+ .item button{
+    border: none;
+ }
+ .item img{
+    transition: 1s;
+    cursor: pointer;
+ }
+ .item img:hover{
+    transform: scale(2);
+ }
+ 
+ .subtot td{
+    padding-top: 2%;
+    /* font-size: 15px; */
+    font-weight: 600;
+ }
+
+/* styling cart done */
+
+/* styling check  */
+.total td{
+    font-size: 30px;
+    font-weight: 500;
+}
+.checkout label{
+    font-weight: 500;
+}
+.checkout .btn{
+    margin-top: 3%;
+    background-color: yellow;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    color: white;
+}
+.checkout.btn:hover{
+    background-color: black;
+}
+.cart .btnback{
+    background-color: black;
+    margin-top: 20%;
+    margin-left: 10%;
+    width: 20%;
+}
+.cart .btnback:hover{
+    background-color: grey;
+}
+.cart .btnback a{
+    text-decoration: none;
+    color: white;
+}
+/* stying checkout done */
+
+/* profile styling */
+.pavat{
+    text-align: center;
+    background-color: yellow;
+    border-radius: 1rem;
+    height: 70vh;
+}
+.pavat img{
+    height: 150px;
+    border-radius: 100%;
+    padding-top: 10%;
+}
+.pavat p{
+    color: white;
+    font-style: italic;
+    text-transform: capitalize;
+    padding-top: 5%;
+}
+.pavat a{
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 20px;
+    color: black;
+}
+.pavat a:hover{
+    color: yellowgreen;
+    font-weight: bolder;
+}
+.pdet table{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    border: 2px solid yellow;
+    margin-top: 5%;
+    height: 50vh;
+    text-align: center;
+    /* padding: 5%; */
+}
+.pdet table td{
+    border: 1px solid yellow;
+}
+.left{
+    font-weight: 500;
+}
+
+
+/* profile styling done */
+
+
+/* styling profile update */
+.pupdate form{
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+    border: 1px dashed yellow;
+    padding: 3%;
+}
+.pupdate form label{
+    font-weight: 600;
+}
+.pupdate button{
+    background-color: yellow;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    color: white;
+    font-weight: 500;
+}
+.pupdate .btn:hover{
+    background-color: black;
+}
+
+
+/* styling callback */
+.thank{
+    text-align: center;
+    margin-top: 10%;
+    width: 50%;
+     margin-left: 18%;
+}
+.thank img{
+    height: 30vh;
+}
+.thank p{
+    font-size: 20px;
+}
+.thank span{
+    text-transform: capitalize;
+    color: yellow;
+    font-weight: 500;
+}
+.thank button{
+    background-color: yellow;
+}
+.thank button:hover{
+    background-color: black;
+}
+.thank a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/* styling callback done */
+
+/* media query (responsiveness) */
+@media(min-width: 320px) and (max-width:768px){
+.carousel-item img {
+        height: 40vh;
+    }
+.carousel-control-prev{
+    font-size: 30px;
+    color: rgb(255, 81, 0);
+}
+
+.carousel-control-next{
+    font-size: 30px;
+    color: rgb(255, 81, 0);
+}
+.wrapper {
+    position: relative;
+}
+
+.wrapper span {
+    position: absolute;
+    color: black;
+    right: 90%;
+    top: -2px;
+    font-size: 10px;
+    border-radius: 50%;
+    background-color: grey;
+}
+.footer{
+    background-color: yellowgreen;
+    height: 300px;
+}
+.foota{
+    background-color: yellowgreen;
+}
+.footb{
+    background-color: yellowgreen;
+}
+.footb p{
+    background-color: grey;
+}
+.foota{
+    display: grid;
+    grid-row-template: 100%;
+}
+.social i:hover{
+    color: aquamarine;
+}
+}
+@media(orientation: portrait ) and (max-width: 700px) {
+   body{
+    background-color: darkgray;
+   }
+
+}
+/* @media (orientation: landscape),
+(min-width: 400px) { */
+@media (min-width: 320px) and (max-width:768px) {
+
+    .fcont .btn {
+            background-color: yellowgreen;
+            width: 100%;
+            color: black;
+            font-weight: 500;
+        }
+    
+        .fcont .btn:hover {
+            background-color: greenyellow;
+            color: goldenrod;
+        }
+    
+        .map {
+            height: 25vh;
+        }
+        .new{
+            background-color: greenyellow;
+            font-weight: 500;
+        }
+        .fprod .card {
+            border: 1px solid yellowgreen;
+            box-shadow: 5px 5px 5px 5px greenyellow;
+            transition: 1s;
+            /* border-radius: 20px; */
+        }
+
+        .fprod .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .fprod .card img {
+            height: 20vh;
+        }
+        .fcat {
+            transition: 0.5s;
+        }
+
+        .fcat:hover {
+            transform: scale(0.4);
+        }
+
+
+        /* .fcat .card-img:hover {
+transform: scale(1.05); */
+        .fcat{
+            width: 300px;
+            margin-left: 100px;
+        }
+
+        .card-img {
+            height: 40vh;
+        }
+}
+
+
+
+
+
+
+
+
+
+/* styling update done */

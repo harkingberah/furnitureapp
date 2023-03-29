@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block loader %} {% include 'loader.html' %} {% endblock loader%}
+{% block header %} {% include 'header.html' %} {% endblock header%}
+{% block carousel %} {% include 'carousel.html' %} {% endblock carousel%}
+{% block content %}
+    <div class="container mt-5 mb-5">
+            <div class="row fdet">
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-md-6">
+                            <img src="{{detail.pix.url}}" class="img-fluid rounded-start" alt="..." style="height: 60vh" style="width: 500px">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h5 class="card-title">{{detail.name}}</h5>
+                                <h5 class="card-title">#{{detail.price}}</h5>
+                                <hr>
+                                <p class="card-text">{{detail.description|title}}</p>
+                                <p class="text-capitalize fdetcat">Category: <span>{{detail.category|title}}</span> </p>
+                                    <button class="btn text-capitalize" type="submit">add to cart</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock content%}
+{%block footer %} {% include 'footer.html' %} {% endblock footer %}

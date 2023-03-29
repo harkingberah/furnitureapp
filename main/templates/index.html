@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% block loader %} {% include 'loader.html' %} {% endblock loader%}
+{% block header %} {% include 'header.html' %} {% endblock header%}
+{% block carousel %} {% include 'carousel.html' %} {% endblock carousel%}
+{% block content %}
+<div class="container-fluid">
+        <div class="row mt-5 mb-5">
+         
+            {% for item in fdog  %}
+                <div class="col-12 col-md-3 mt-3">
+                    <div class="card text-bg-dark fcat">
+                        <a href="{% url 'category' item.id item.slug %}"><img src="{{item.img.url}}" class="card-img" alt="...">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title text-capitalize bg-black text-center text-white">{{item.name}}</h5>
+                
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+                
+           
+        </div>
+    </div>
+
+
+    <div class="container">
+        <h1 class="title">featured products</h1>
+        <div class="row mt-5 mb-5">
+            
+            {% for product in featured %}
+            <div class="col-12 col-md-4 mt-5 fprod">
+                <div class="card">
+                    <a href="{% url 'detail' product.id product.slug %}"><img src="{{product.pix.url}}" class="card-img-top" alt="..."></a>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-8">
+                                <h5 class="card-title text-capitalize">{{product.name|title}}</h5>
+                                <p class="card-text">{{product.category|title}}</p>
+                            </div>
+                            <div class="col-4">
+                                <h5 class="card-title float-end">{{product.price}}</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+                
+        </div>
+    </div>
+           
+
+    <!-- another section  -->
+
+    <div class="container-fluid ship">
+        <div class="row">
+            <div class="col-12 col-md-3">
+                <div class="row">
+                    <div class="col-2">
+                    <i class="bi bi-truck"></i>
+                    </div>
+                    <div class="col-9">
+                        <h5 class="text-capitalize">free shipping</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, facilis.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="row">
+                    <div class="col-2">
+                        <i class="bi bi-credit-card-2-back"></i>
+                    </div>
+                    <div class="col-9">
+                        <h5 class="text-capitalize">secured payment</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, facilis.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="row">
+                    <div class="col-2">
+                        <i class="bi bi-cash"></i>
+                    </div>
+                    <div class="col-9">
+                        <h5 class="text-capitalize">14-days return</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, facilis.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-3">
+                <div class="row">
+                    <div class="col-2">
+                        <i class="bi bi-telephone-fill"></i>
+                    </div>
+                    <div class="col-9">
+                        <h5 class="text-capitalize">24/7 support</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore, facilis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endblock content%}
+    {%block footer %} {% include 'footer.html' %} {% endblock footer %}
